@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery.mobile.structure.min.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile.min.js"></script>
+</head>
+<body>
+<script>
+	$(document).bind("pageinit",(function() {
+		$('#login').click(function() {
+			$('#data').html(data);
+			$('#try_ajax').popup('open');
+				}
+			});
+	}));
+	</script>
+<div data-role="page" id="page1" >
+	<div role="main" class="ui-content" style="text-align:center">
+		<h1>Let's Play</h1>
+		<img src="gmbr/littlewarlogo.jpg" />
+		<h3>We're all at the same Games</h3>
+		<input type="button" id="play" value="Start Play">
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-inset="false">
+				<h3>Settings</h3>
+				<ul data-role="listview">
+					<li><a href="#page2">Connect to Facebook</a></li>
+					<li><a href="#page3">Help and Forums</a></li>
+					<li><a href="#page4">Notifications</a></li>
+					<li><a href="#page5">Choose Language</a></li>
+				</ul>
+			</div>
+			<div data-role="collapsible" data-inset="false">
+				<h3>About</h3>
+				<ul data-role="listview">
+					<li><a href="#page6">Credits</a></li>
+					<li><a href="#page7">Check Version</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>Images may be subject to copyright @Sendy</h4>
+		</div>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header" data-position="fixed" data-add-back-btn="true">
+		<h3>Login to Facebook</h3>
+		<a href="#page1" data-icon="home" class="ui-btn-right">Home</a>
+	</div>
+	<div role="main" class="ui-content" style="text-align:center">
+	<form id="form1">
+		<img src="gmbr/fb.jpg" />
+		<div data-role="fieldcontain">
+				<label> Username:</label>
+				<input type="text" name="user" id="user" value="yanty.syaman@jpa.gov.my" /> <br/>
+		</div>
+		<div data-role="fieldcontain">
+				<label> Password:</label>
+				<input type="text" name="pwd" id="pwd" value="*******" /> <br/>
+		</div>
+		<a href="#pop1" class="ui-btn ui-btn-inline" data-transition="flip" data-rel="popup"> Continue</a>
+		<div data-role="popup" id="pop1" data-overlay-theme="b" data-theme="a" data-dismisible="false" style="max-width:300px;min-width:200px;">
+			<div data-role="header">
+				<h3>Error to Login</h3>
+			</div>
+			<div role="main" class="ui-content">
+				<div id="data" style="text-align:center">
+					<h4>Sign in with Facebook</h4>
+					<p>Please enter the email or phone number and password you use to log into Facebook.</p>
+				</div>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" data-rel="back" ></a>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow" data-rel="back">OK</a>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page2" data-icon="star" data-transition="flip" class="ui-btn-active ui-state-persist">Connect to Facebook</a></li>
+					<li><a href="#page3" data-icon="arrow-l" data-transition="flip" > Help and Forums </a></li>
+					<li><a href="#page4" data-icon="grid" data-transition="flip"> Notification </a></li>
+					<li><a href="#page5" data-icon="gear" data-transition="flip">Choose Language</a></li>
+				</ul>
+			</div>
+		</div>	
+	</form>		
+	</div>
+</div>
+<div data-role="page" id="page3">
+	<div data-role="header" data-position="fixed" data-add-back-btn="true">	
+		<h3>Help and Forums</h3>
+		<a href="#page1" data-icon="home" class="ui-btn-right">Home</a>		
+	</div>
+	<div role="main" class="ui-content" style="text-align:center">
+			<img src="gmbr/download.jpg" />
+			<img src="gmbr/041708_Forums.jpg" />
+	</div>
+	<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page2" data-icon="star" data-transition="flip">Connect to Facebook</a></li>
+					<li><a href="#page3" data-icon="arrow-l" class="ui-btn-active ui-state-persist" data-transition="flip"> Help and Forums </a></li>
+					<li><a href="#page4" data-icon="grid" data-transition="flip"> Notification </a></li>
+					<li><a href="#page5" data-icon="gear" data-transition="flip">Choose Language</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<div data-role="page" id="page4">
+	<div data-role="header" data-position="fixed" data-add-back-btn="true">
+		<h3>Notifications Setting</h3>
+		<a href="#page1" data-icon="home" class="ui-btn-right">Home</a>	
+	</div>
+	<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page2" data-icon="star" data-transition="flip"> Connect to Facebook</a></li>
+					<li><a href="#page3" data-icon="arrow-l" data-transition="flip"> Help and Forums </a></li>
+					<li><a href="#page4" data-icon="grid" class="ui-btn-active ui-state-persist" data-transition="flip"> Notification </a></li>
+					<li><a href="#page5" data-icon="gear" data-transition="flip"> Choose Language</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<div data-role="page" id="page5">
+	<div data-role="header" data-position="fixed" data-add-back-btn="true">
+		<h3>Language Setting</h3>
+		<a href="#page1" data-icon="home" class="ui-btn-right">Home</a>	
+	</div>
+	<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page2" data-icon="star" data-transition="flip">Connect to Facebook</a></li>
+					<li><a href="#page3" data-icon="arrow-l" data-transition="flip">Help and Forums </a></li>
+					<li><a href="#page4" data-icon="grid" data-transition="flip">Notification </a></li>
+					<li><a href="#page5" data-icon="gear" class="ui-btn-active ui-state-persist" data-transition="flip">Choose Language</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+
+<div data-role="page" id="page6">
+	<div data-role="header" data-position="fixed" data-add-back-btn="true">	
+		<h3>Credits</h3>
+		<a href="#page1" data-icon="home" class="ui-btn-right">Home</a>		
+	</div>
+	<div role="main" class="ui-content" style="text-align:center">
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Searching..." >
+			<img src="gmbr/freecredits.png"/>
+				<li>
+					<img src="gmbr/mario.jpg" width="200" />
+					<strong> Name:</strong> Sendy Yanty binti Syaman
+					<p> <strong>Designation:</strong>  Programmer</p>
+					<p>
+					<a href="tel=+60383164265" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Phone</a>
+					<a href="sms://60127970866" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"> SMS </a>
+					<a href="mailto:yanty.syaman@jpa.gov.my" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline"> Email </a>
+					</p>
+				</li>
+				<li>
+					<img src="gmbr/luigi.jpg" width="200" />
+					<strong> Name:</strong> Mohd Nurul Izani bin Mohd Asri
+					<p> <strong>Designation:</strong>  Designer</p>
+					<p>
+					<a href="tel=+60383164525" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Phone</a>
+					<a href="sms://60127291455" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"> SMS </a>
+					<a href="mailto:izyanty1604_irfan@yahoo.com" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline"> Email </a>
+					</p>
+				</li>
+			</ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page6" data-icon="star" class="ui-btn-active ui-state-persist">Credits</a></li>
+					<li><a href="#page7" data-icon="arrow-l" > Check Versions </a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+
+</body>
+</html>
